@@ -21,7 +21,7 @@ class RegisterForm extends Controller
                 'name' => 'required',  //name field required
                 'email' => 'required | email', // email field must be email
                 'password' => 'required ', // password field required 
-                'confirmPassword' => 'required |same:password', // confirmpassword field required and must match to password field
+                'confirm-password' => 'required |same:password', // confirmpassword field required and must match to password field
             ]
         );
 

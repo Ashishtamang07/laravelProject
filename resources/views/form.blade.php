@@ -17,52 +17,21 @@
         <!-- place navbar here -->
     </header>
     <main>
+        <!-- action attribute takes user post request to server in specific file loaction -->
         <form action="{{url('/')}}/register" method="post">
             <!-- csrf token authenticate the user request to server -->
             @csrf
 
+
             <div class="container">
                 <h2 class="text-center">Registration</h2>
-                <div class="mb-3">
-                    <label for="" class="form-label">Name</label>
-                    <!-- value="{{old('name')}}" helps to regenereate old value after refreshing the form  -->
-                    <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId" value="{{old('name')}}">
-                    <span class="text-danger">
-                        <!-- error function takes key argument and  helps to catch error with $message  -->
-                        @error('name')
-                        {{$message}}
-                        @enderror
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">email</label>
-                    <input type="text" name="email" id="" class="form-control" placeholder="email" aria-describedby="helpId" value="{{old('email')}}">
-                    <span class="text-danger">
-                        @error('email')
-                        {{$message}}
-                        @enderror
-                    </span>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">password</label>
-                    <input type="password" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                    <!-- <small id="helpId" class="text-muted">Help text</small> -->
-                    <span class="text-danger">
-                        @error('password')
-                        {{$message}}
-                        @enderror
-                        </sp>
-                </div>
-                <div class="mb-3">
-                    <label for="" class="form-label">confirm password</label>
-                    <input type="password" name="confirmPassword" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                    <!-- <small id="helpId" class="text-muted">Help text</small> -->
-                    <span class="text-danger">
-                        @error('confirmPassword')
-                        {{$message}}
-                        @enderror
-                    </span>
-                </div>
+                <x-input type="text" name="name" label="enter ur name" />
+                <x-input type="email" name="email" label="enter ur email" />
+                <x-input type="password" name="password" label="enter ur password" />
+                <x-input type="password" name="confirm-password" label="enter ur confirm password" />
+
+
+
                 <h4 class="text-center">
                     <button class="btn btn-primary" type="submit">sumnit</button>
                 </h4>
