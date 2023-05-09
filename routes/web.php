@@ -24,3 +24,4 @@ Route::post('/register', [RegisterForm::class, 'register']);
 //customer controller
 Route::get('/customer', [CustomerController::class, 'index']);
 Route::post('/customer', [CustomerController::class, 'store']);
+Route::get('/customer/view', [CustomerController::class, 'view']);

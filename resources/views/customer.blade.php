@@ -31,6 +31,11 @@
                     <small id="helpId" class="text-muted">Help text</small>
                 </div>
                 <div class="mb-3">
+                    <label for="" class="form-label">customer password</label>
+                    <input type="text" name="customerPassword" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <div class="mb-3">
                     <label for="" class="form-label">customer address</label>
                     <input type="text" name="customerAddress" id="" class="form-control" placeholder="" aria-describedby="helpId">
                     <small id="helpId" class="text-muted">Help text</small>

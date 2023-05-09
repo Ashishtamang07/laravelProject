@@ -22,9 +22,25 @@ class CustomerController extends Controller
 
         $customer = new Customer();
         $customer->customer_name = $request['customerName'];
+        // $customer->customer_password = md5($request['customerPassword']);
+
         $customer->customer_address = $request['customerAddress'];
         $customer->country_name = $request['countryName'];
         $customer->state_name = $request['stateName'];
         $customer->save();
+
+        return redirect('/customer/view');
+    }
+    public function view()
+    {
+        // bring all data from customer table or model 
+        $customer = Customer::all();
+        //compact all customer data 
+
+
+        $data = compact('customer');
+
+
+        return view('customer-view')->with($data);
     }
 }
